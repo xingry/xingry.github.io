@@ -1,0 +1,187 @@
+---
+layout: default
+title: "页面未找到"
+permalink: /404.html
+---
+
+<style>
+.error-page {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 0;
+  line-height: 1;
+}
+
+.error-title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  color: #2c3e50;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+.btn-secondary {
+  background: #95a5a6;
+}
+
+.btn-secondary:hover {
+  background: #7f8c8d;
+}
+
+.search-box {
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.recent-posts {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  text-align: left;
+}
+
+.recent-posts h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+.post-list a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.post-list a:hover {
+  color: #3498db;
+}
+
+.post-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .error-code {
+    font-size: 6rem;
+  }
+  
+  .error-title {
+    font-size: 2rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+</style>
+
+<div class="error-page">
+  <h1 class="error-code">404</h1>
+  <h2 class="error-title">页面未找到</h2>
+  
+  <p class="error-message">
+    抱歉，您访问的页面不存在或已被移动。
+    可能是链接错误、页面已被删除，或者您输入了错误的网址。
+  </p>
+  
+  <div class="error-actions">
+    <a href="/" class="btn">返回首页</a>
+    <a href="/archive/" class="btn btn-secondary">查看归档</a>
+    <a href="javascript:history.back()" class="btn btn-secondary">返回上一页</a>
+  </div>
+  
+  <div class="search-box">
+    <input type="text" class="search-input" placeholder="搜索文章..." id="searchInput">
+  </div>
+  
+  <div class="recent-posts">
+    <h3>最近的文章</h3>
+    <ul class="post-list">
+      {% for post in site.posts limit:5 %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script>
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    const query = this.value.trim();
+    if (query) {
+      window.location.href = '/search/?q=' + encodeURIComponent(query);
+    }
+  }
+});
+</script>
