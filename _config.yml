@@ -16,7 +16,7 @@ permalink: /:year/:month/:day/:title/
 timezone: Asia/Shanghai
 
 # Theme
-theme: jekyll-theme-minima
+theme: minima
 
 # Exclude from processing
 exclude:
