@@ -1,5 +1,5 @@
 # Site settings
-title: "星如意的博客"
+title: "老邢的博客"
 email: ""
 description: "记录技术思考、生活感悟与学习笔记"
 baseurl: ""
@@ -7,7 +7,7 @@ url: "https://xingry.github.io"
 
 # Author settings
 author:
-  name: "星如意"
+  name: "老邢"
 
 # Build settings
 markdown: kramdown
