@@ -1,23 +1,29 @@
-# 最简单的Jekyll配置
-title: "星如意的博客"
+# Site settings
+title: "老邢的博客"
+email: ""
 description: "记录技术思考、生活感悟与学习笔记"
 baseurl: ""
 url: "https://xingry.github.io"
 
 author:
-  name: "星如意"
+  name: "老邢"
 
 markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 timezone: Asia/Shanghai
 
-# 使用GitHub Pages支持的默认主题
+# Theme
 theme: minima
 
-# 排除不必要的文件
+# Exclude from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore
+  - README.md
