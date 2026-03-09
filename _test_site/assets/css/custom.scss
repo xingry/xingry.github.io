@@ -1,0 +1,367 @@
+---
+---
+
+// 自定义样式
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$accent-color: #e74c3c;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+$text-color: #333;
+$border-color: #dee2e6;
+
+// 基础样式
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $light-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// 头部样式
+.site-header {
+  background: $secondary-color;
+  color: white;
+  padding: 1rem 0;
+  
+  .site-title {
+    margin: 0;
+    font-size: 1.8rem;
+    
+    a {
+      color: white;
+      text-decoration: none;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  
+  .site-nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+      
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 首页样式
+.home-intro {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  margin-bottom: 2rem;
+  
+  .site-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .site-description {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+}
+
+// 文章预览样式
+.post-preview {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .post-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+    
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  
+  .post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    
+    time {
+      margin-right: 1rem;
+    }
+  }
+  
+  .post-tags {
+    .tag {
+      display: inline-block;
+      background: $light-color;
+      color: $secondary-color;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      margin-right: 0.5rem;
+      text-decoration: none;
+      
+      &:hover {
+        background: $primary-color;
+        color: white;
+      }
+    }
+  }
+  
+  .post-excerpt {
+    color: #555;
+  }
+}
+
+// 首页分区样式
+.home-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  
+  .section {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    h3 {
+      margin-top: 0;
+      color: $secondary-color;
+      border-bottom: 2px solid $primary-color;
+      padding-bottom: 0.5rem;
+    }
+  }
+  
+  .category-list,
+  .archive-list {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 0.5rem;
+      
+      a {
+        color: $secondary-color;
+        text-decoration: none;
+        
+        &:hover {
+          color: $primary-color;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  .tag-cloud {
+    .tag {
+      display: inline-block;
+      background: $light-color;
+      color: $secondary-color;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      margin: 0.3rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+      
+      &:hover {
+        background: $primary-color;
+        color: white;
+      }
+    }
+  }
+}
+
+// 文章页面样式
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: $secondary-color;
+    margin-top: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    border-bottom: 3px solid $primary-color;
+    padding-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: 0.3rem;
+  }
+  
+  code {
+    background: $light-color;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+  
+  pre {
+    background: #282c34;
+    color: #abb2bf;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+  
+  blockquote {
+    border-left: 4px solid $primary-color;
+    padding-left: 1rem;
+    margin-left: 0;
+    color: #666;
+    font-style: italic;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    
+    th, td {
+      border: 1px solid $border-color;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    
+    th {
+      background: $light-color;
+      font-weight: 600;
+    }
+  }
+}
+
+// 页脚样式
+.site-footer {
+  background: $secondary-color;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  
+  .footer-content {
+    p {
+      margin: 0.5rem 0;
+      opacity: 0.8;
+    }
+    
+    .social-links {
+      margin-top: 1rem;
+      
+      a {
+        color: white;
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        text-decoration: none;
+        
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .home-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .home-intro .site-title {
+    font-size: 2rem;
+  }
+  
+  .post-content {
+    padding: 1rem;
+  }
+}
+
+// 暗色模式支持
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $dark-color;
+    color: #e0e0e0;
+  }
+  
+  .post-preview,
+  .home-sections .section {
+    background: #2d2d2d;
+    color: #e0e0e0;
+  }
+  
+  .post-title a,
+  .category-list a,
+  .archive-list a {
+    color: #e0e0e0;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  .post-excerpt {
+    color: #b0b0b0;
+  }
+  
+  .tag {
+    background: #3d3d3d;
+    color: #e0e0e0;
+  }
+}

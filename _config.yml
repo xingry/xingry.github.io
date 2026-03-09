@@ -1,26 +1,13 @@
 # Site settings
 title: "星如意的博客"
-email: ""  # 你可以在这里填写邮箱
+email: ""
 description: "记录技术思考、生活感悟与学习笔记"
-baseurl: ""  # 子路径，如果博客在子目录中
-url: "https://xingry.github.io"  # 你的域名
+baseurl: ""
+url: "https://xingry.github.io"
 
 # Author settings
 author:
   name: "星如意"
-  avatar: "/assets/images/avatar.jpg"  # 头像路径
-  bio: "热爱技术的开发者，喜欢探索新事物"
-  location: "中国"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/xingry"
-    - label: "Twitter"
-      icon: "fab fa-twitter"
-      url: "https://twitter.com/xingry"
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:your-email@example.com"
 
 # Build settings
 markdown: kramdown
@@ -28,41 +15,8 @@ highlighter: rouge
 permalink: /:year/:month/:day/:title/
 timezone: Asia/Shanghai
 
-# Theme settings
-theme: minima  # 使用简洁的minima主题
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-# SEO
-seo:
-  title: "星如意的博客"
-  description: "技术博客，分享编程、技术和生活"
-  keywords: "技术,编程,博客,开发,学习"
-
-# Social sharing
-share:
-  twitter: true
-  linkedin: false
-  facebook: false
-  weibo: false
-
-# Comments (可选)
-comments:
-  disqus:
-    shortname: ""  # 如果需要Disqus评论，填写shortname
-
-# Analytics (可选)
-analytics:
-  google: ""  # Google Analytics ID
-  baidu: ""   # 百度统计ID
-
-# Pagination
-paginate: 10
-paginate_path: "/page:num/"
+# Theme
+theme: jekyll-theme-minima
 
 # Exclude from processing
 exclude:
