@@ -27,6 +27,21 @@ timezone: Asia/Shanghai
 paginate: 10
 paginate_path: "/page/:num/"
 
+# 集合配置
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+# 默认值配置
+defaults:
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
 # Chirpy 主题配置
 theme: jekyll-theme-chirpy
 
