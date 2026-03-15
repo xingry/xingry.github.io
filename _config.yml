@@ -7,6 +7,11 @@ tagline: "记录技术思考、生活感悟与学习笔记"
 description: "老邢的技术博客，分享编程、AI 和生活感悟"
 url: "https://xingry.github.io"
 baseurl: ""
+
+# 语言设置
+lang: zh-CN
+
+# 作者信息
 author:
   github: xingry
   twitter: xingry
@@ -17,9 +22,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 timezone: Asia/Shanghai
-
-# 语言设置
-lang: zh-CN
 
 # Chirpy 主题配置
 theme: jekyll-theme-chirpy
@@ -46,21 +48,3 @@ exclude:
   - vendor/ruby/
   - .gitignore
   - README.md
-
-# Chirpy 主题特定配置
-chirpy:
-  # 社交链接
-  social:
-    github: xingry
-    twitter: xingry
-
-# 收录设置（Chirpy 需要）
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      comments: true
-      sharing: true
-      permalink: pretty
