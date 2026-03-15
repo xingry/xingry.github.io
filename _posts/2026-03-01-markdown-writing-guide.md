@@ -141,7 +141,7 @@ author: 作者名
 ### 包含文件
 
 ```liquid
-{% include file.html %}
+{% raw %}{% include file.html %}{% endraw %}
 ```
 
 ## 写作建议
