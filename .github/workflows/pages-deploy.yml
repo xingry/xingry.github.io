@@ -43,7 +43,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v2
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
           bundler-cache: true
@@ -51,7 +51,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: |
