@@ -1,12 +1,14 @@
 ---
 layout: page
 title: 关于我
+icon: fas fa-user
+order: 4
 permalink: /about/
 ---
 
-# 关于我
+## 关于我
 
-你好！我是星如意，一名热爱技术的开发者。
+你好！我是老邢，一名热爱技术的开发者。
 
 ## 我的经历
 
@@ -37,6 +39,6 @@ permalink: /about/
 如果你有任何问题或想交流，可以通过以下方式联系我：
 
 - GitHub: [xingry](https://github.com/xingry)
-- Email: [填写你的邮箱]
+- Twitter: [xingry](https://twitter.com/xingry)
 
 感谢访问我的博客！
