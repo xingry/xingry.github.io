@@ -5,7 +5,7 @@ date: 2026-03-09 11:45:00 +0800
 categories: [技术, AI]
 tags: [OpenClaw, 飞书, AI助手, 自动化, 集成]
 author: 星如意
-pin: 1
+pin: true
 ---
 
 # OpenClaw与飞书深度集成：打造智能办公助手

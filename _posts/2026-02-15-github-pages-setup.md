@@ -5,7 +5,7 @@ date: 2026-02-15 10:00:00 +0800
 categories: [教程, GitHub]
 tags: [github, pages, 博客, 教程]
 author: 星如意
-pin: 1
+pin: true
 ---
 
 # GitHub Pages搭建个人博客完整指南
