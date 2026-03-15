@@ -20,27 +20,17 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# 使用 Node.js 24 运行 JavaScript Actions
+# 允许使用 Node.js 20 运行的 Actions（临时解决方案）
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
 jobs:
   # 构建工作
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [24]
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0  # 获取所有历史记录
-
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
+        uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -65,7 +55,7 @@ jobs:
           PAGES_ENV: github
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
 
   # 部署工作
   deploy:
