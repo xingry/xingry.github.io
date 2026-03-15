@@ -6,6 +6,7 @@ title: "老邢的博客"
 tagline: "记录技术思考、生活感悟与学习笔记"
 description: "老邢的技术博客，分享编程、AI 和生活感悟"
 url: "https://xingry.github.io"
+baseurl: ""
 author:
   github: xingry
   twitter: xingry
@@ -28,11 +29,11 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
 
-# 社交链接
-social:
-  github: xingry
-  twitter: xingry
+# 分页设置
+paginate: 10
+paginate_path: /page:num/
 
 # 排除文件
 exclude:
@@ -46,13 +47,20 @@ exclude:
   - .gitignore
   - README.md
 
-# 侧边栏配置（可选）
-sidebar:
-  - category: 技术
-  - category: AI
-  - category: 教程
-  - category: 公告
+# Chirpy 主题特定配置
+chirpy:
+  # 社交链接
+  social:
+    github: xingry
+    twitter: xingry
 
-# 分页设置
-paginate: 10
-paginate_path: /page:num/
+# 收录设置（Chirpy 需要）
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      sharing: true
+      permalink: pretty
